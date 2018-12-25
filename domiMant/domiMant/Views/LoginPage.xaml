@@ -3,7 +3,48 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="domiMant.Views.LoginPage"
-    BindingContext="{Binding Main, Source={Locator}}">
+    BindingContext="{Binding Main, Source={StaticResource Locator}}"
+    Title="Login">
     <ContentPage.Content>
+        <StackLayout
+            BindingContext="{Binding Login}"
+            Padding="10">
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label
+                     Grid.Row="0"
+                    Grid.Column="0"
+                    Text="Email :"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="Center"/>
+                <Entry
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Placeholder="Ingregse su Email"
+                    Text="{Binding Email, Mode=TwoWay}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="StartAndExpand"/>
+                
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Text="Password :"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="Center"/>
+                <Entry
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Placeholder="Ingrese su Clave"
+                    Text="{Binding Password, Mode=TwoWay}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="StartAndExpand"/>
+            </Grid>
+            
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

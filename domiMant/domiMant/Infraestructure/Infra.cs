@@ -6,7 +6,10 @@ namespace domiMant.Infraestructure
 
     public class Infra
     {
-        public MainViewModel Main;
+        public MainViewModel Main{
+            get;
+            set;
+        }
 
         public Infra()
         {

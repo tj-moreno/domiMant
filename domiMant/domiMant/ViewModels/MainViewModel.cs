@@ -5,6 +5,10 @@ namespace domiMant.ViewModels
 
     public class MainViewModel
     {
+        #region Propertys
+
+        #endregion
+
         #region Constructor
         public MainViewModel()
         {

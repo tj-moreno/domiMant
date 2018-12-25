@@ -1,4 +1,5 @@
 ﻿using System;
+using domiMant.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,9 @@ namespace domiMant
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            //MainPage = new MainPage();
+
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()

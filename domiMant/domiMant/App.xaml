@@ -6,7 +6,7 @@
     xmlns:Infra="clr-namespace:domiMant.Infraestructure">
     <Application.Resources>
         <ResourceDictionary>
-            <Infra:InstanLocator x:Key="Locator"/>
+            <Infra:Infra x:Key="Locator"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
