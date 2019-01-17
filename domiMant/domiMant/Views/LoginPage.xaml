@@ -6,45 +6,89 @@
     BindingContext="{Binding Main, Source={StaticResource Locator}}"
     Title="Login">
     <ContentPage.Content>
-        <StackLayout
-            BindingContext="{Binding Login}"
-            Padding="10">
-            
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="2*"/>
-                </Grid.ColumnDefinitions>
+        <ScrollView>
+            <StackLayout
+                BindingContext="{Binding Login}"
+                Padding="10">
                 
-                <Label
-                     Grid.Row="0"
-                    Grid.Column="0"
-                    Text="Email :"
-                    HorizontalOptions="StartAndExpand"
-                    VerticalOptions="Center"/>
-                <Entry
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    Placeholder="Ingregse su Email"
-                    Text="{Binding Email, Mode=TwoWay}"
-                    VerticalOptions="Center"
-                    HorizontalOptions="StartAndExpand"/>
+                <Image
+                    Source="tra1"
+                Margin="50"/>
                 
-                <Label
-                    Grid.Row="1"
-                    Grid.Column="0"
-                    Text="Password :"
-                    HorizontalOptions="StartAndExpand"
-                    VerticalOptions="Center"/>
-                <Entry
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    Placeholder="Ingrese su Clave"
-                    Text="{Binding Password, Mode=TwoWay}"
-                    VerticalOptions="Center"
-                    HorizontalOptions="StartAndExpand"/>
-            </Grid>
-            
-        </StackLayout>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Label
+                         Grid.Row="0"
+                        Grid.Column="0"
+                        Text="E-mail :"
+                        FontAttributes="Bold"/>
+                    <Entry
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Placeholder="Ingregse su Email"
+                        Text="{Binding Email, Mode=TwoWay}"/>
+                    
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="Password :"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"/>
+                    <Entry
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Placeholder="Ingrese su Clave"
+                        Text="{Binding Password, Mode=TwoWay}"/>               
+                </Grid>
+                
+                
+                <StackLayout
+                    Padding="10"
+                    Orientation="Horizontal">
+                     <Label
+                        HorizontalOptions="StartAndExpand"
+                        VerticalOptions="Center"
+                        FontAttributes="Bold"
+                        Text="Recordarme en este Dispositivo?"/>
+                    <Switch
+                        HorizontalOptions="EndAndExpand"
+                        VerticalOptions="Center"
+                        IsEnabled="{Binding IsEnable,Mode=TwoWay}"
+                        />
+                </StackLayout>
+                
+                <ActivityIndicator
+                    IsRunning="{Binding IsRunning, Mode=TwoWay}"
+                    HorizontalOptions="Center"/>
+                
+                
+                <StackLayout
+                    Orientation="Vertical"
+                    
+                    >
+                    <Button
+                        Text="Entrar"
+                 
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        BackgroundColor="Navy"
+                        CornerRadius="20"
+                    />
+                    <Button
+                        Text="Registrarse"
+                    
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        BackgroundColor="Green"
+                        CornerRadius="20"
+                    />
+                </StackLayout>
+                
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

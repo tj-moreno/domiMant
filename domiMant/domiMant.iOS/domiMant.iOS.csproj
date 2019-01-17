@@ -157,4 +157,8 @@
       <Name>domiMant</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tra1.png" />
+    <BundleResource Include="Resources\Domimant.JPG" />
+  </ItemGroup>
 </Project>

@@ -7,13 +7,14 @@ namespace domiMant.ViewModels
     {
         #region Propertys
         public LoginViewModel Login { get; set; }
+
         #endregion
 
         #region Constructor
         public MainViewModel()
         {
             Instance = this;
-            this.Login= new LoginViewModel
+            this.Login = new LoginViewModel();
             //Aqui se especifican las Viewmodel que se enlazaran a cada page
         }
         #endregion

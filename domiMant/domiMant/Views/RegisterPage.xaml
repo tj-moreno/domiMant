@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="domiMant.Views.RegisterPage"
+    BindingContext="{Binding Main, Source={StaticResource Locator}}"
+    Title="Registro de Usuarios">
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+                BindingContext="{Binding Register}"
+                Margin="10">
+                
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                       <ColumnDefinition Width="*"/>
+                       <ColumnDefinition Width="2*"/> 
+                    </Grid.ColumnDefinitions>
+                    
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="Nombres :"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"/>
+                    <Entry
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Placeholder="Nombres"/>
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="Apellidos :"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"/>
+                    <Entry
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Placeholder="Apellidos"/>
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="Direccion :"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"/>
+                    <Editor
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Placeholder="Direccion"
+                        Keyboard="Text"
+                    AutoSize="TextChanges"/>
+                    <Label
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Text="Telefono :"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"/>
+                    <Entry
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        Placeholder="Telefono"
+                        Keyboard="Telephone"/>
+                    <Label
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        Text="E-Mail :"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"/>
+                    <Entry
+                        Grid.Row="4"
+                        Grid.Column="1"
+                        Placeholder="ejemplo@domimant.com"
+                        Keyboard="Email"/>
+                     <Label
+                        Grid.Row="5"
+                        Grid.Column="0"
+                        Text="Contrasena :"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"/>
+                    <Entry
+                        Grid.Row="5"
+                        Grid.Column="1"
+                        Placeholder="Contrasena"
+                        IsPassword="true"/>
+                     <Label
+                        Grid.Row="6"
+                        Grid.Column="0"
+                        Text="Confirmar :"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"/>
+                    <Entry
+                        Grid.Row="6"
+                        Grid.Column="1"
+                        Placeholder="Contrasena"
+                        IsPassword="true"/>
+                </Grid>
+                
+                <StackLayout
+                    Orientation="Horizontal">
+                    <Label
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        Text="Brindar servicios de Mecanica?"/>
+                    <Switch
+                        HorizontalOptions="EndAndExpand"
+                        />
+                 </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
